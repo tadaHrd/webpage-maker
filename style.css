@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 500px;
+}
+
+textarea, button, input {
+    padding: 5px;
+}
+
+button, input {
+    font-size: 1.25rem;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+    <meta name="color-scheme" content="dark">
+
+    <title>App pro Sebastiana</title>
+</head>
+<body>
+    <h1>Input text/Vstupní text</h1> <br>
+
+    <input type="file" value="Upload/Nahrát" onchange="input.value = readString(event)"></input>
+    <button onclick="saveString(output.value)">Save/Uložit</button>
+    <button onclick="output.select(); document.execCommand('copy')">Copy/Kopírovat</button>
+
+    <br> <br>
+
+    <textarea
+        name="input"
+        id="input"
+        placeholder="Někdo Veliký&NewLine;obrazek1 obrazek2&NewLine;- je cool&NewLine;&NewLine;Byl někdo.&NewLine;&NewLine;&NewLine;Dělal něco&NewLine;&NewLine;&NewLine;&NewLine;Někdo malinký&NewLine;bez obrázků&NewLine;..."
+    ></textarea>
+    <br> <br>
+
+    <h1>Output webpage/Výstupní web</h1> <br>
+
+    <button onclick="output.innerText = generateHTML(parseText(input.value))">Generate/Vygenerovat</button>
+    <button onclick="saveString(output.value)">Save/Uložit</button>
+    <button onclick="output.select(); document.execCommand('copy')">Copy/Kopírovat</button>
+
+    <br> <br>
+
+    <textarea
+        name="output"
+        id="output"
+    ></textarea>
+</body>
+</html>
